@@ -1,0 +1,23 @@
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>[% team %]</title>
+    </head>
+    <body>
+    [% IF flag %]
+        [% IF correct %]
+            <h1>[% flag %] is correct!</h1>
+        [% ELSE %]
+            <h1>[% flag %] is not correct</h1>
+        [% END %]
+    [% END %]
+        <form action="/[% team %]" method="get">
+            <p>
+                Flag: <input name="flag" type="text" />
+                <br/>
+                <input type="submit"/>
+            </p>
+        </form>
+        <h1><a href="scoreboard" >Scoreboard</a></h1>
+    </body>
+</html>
